@@ -1,0 +1,16 @@
+# Hyprland-specific rule
+#
+# This layer is meant to override the shared desktop config with Hyprland-specific
+# settings, including GTK theming and window-manager config.
+
++ .config/hypr/**
++ .config/waybar/**
++ .config/gtk-3.0/**
++ .config/gtk-4.0/**
++ .config/qt5ct/**
++ .config/qt6ct/**
++
+# Keep Plasma config out of this profile unless explicitly added elsewhere.
+- .config/KDE/**
+- .config/plasma-org.kde.plasmashell/**
+- .config/plasmaro

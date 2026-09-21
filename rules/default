@@ -1,0 +1,54 @@
+# Default shared profile rules for ~/.profiles
+#
+# This file should contain only general, non-desktop config that is common across
+# environments. Desktop and window-manager settings are handled by the desktop
+# and DE-specific rule files.
+#
+# Format:
+#   + <path>     include this path relative to the target home directory
+#   - <path>     exclude this path relative to the target home directory
+#   # comment    ignored line
+#
+# Rules support shell-style wildcards like *, **, and ?.
+
++ .bashrc
++ .bash_profile
++ .bash_logout
++ .zshrc
++ .zprofile
++ .viminfo
++ .gitconfig
++ .python_history
++ .cargo/
++ .gradle/
++ .java/
++ .local/
++ .mozilla/
++ .npm/
++ .nuget/
++ .pki/
++ .rustup/
++ .ssh/
++ .steam/
++ .steampath
++ .steampid
++ .thunderbird/
++ .vscode/
++ .vscode-shared
++ .wakatime
++ .zcompdump
++ .cache/
++
+# Keep large user-data directories out of the saved baseline unless explicitly
+# wanted in a custom profile.
+- Desktop/
+- Documents/
+- Downloads/
+- Games/
+- Music/
+- Pictures/
+- Public/
+- Templates/
+- Videos/
+- Vaults/
+- Syncthing/

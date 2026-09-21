@@ -1,0 +1,16 @@
+# Plasma-specific rule
+#
+# Plasma-specific config is layered on top of the shared desktop rule, so a
+# Plasma profile can provide KDE details without pulling in Hyprland settings.
+
++ .config/KDE/**
++ .config/plasma-org.kde.plasmashell/**
++ .config/plasmaro
++ .config/gtk-3.0/**
++ .config/gtk-4.0/**
++ .config/qt5ct/**
++ .config/qt6ct/**
++
+# Keep alternative desktop-manager config out unless deliberately included.
+- .config/hypr/**
+- .config/waybar/**

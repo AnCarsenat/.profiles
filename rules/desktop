@@ -1,0 +1,25 @@
+# Shared desktop environment rule
+#
+# This file captures the UI/session config that is used across desktop
+# environments, especially GTK/Qt theming files that Hyprland and Plasma both
+# depend on.
+
++ .gtkrc-2.0
++ .gtkrc-2.0-kde4
++ .config/gtk-3.0/**
++ .config/gtk-4.0/**
++ .config/qt5ct/**
++ .config/qt6ct/**
++ .config/*/themes/**
++ .config/*/gtk*/*
++ .config/hypr/**
++ .config/KDE/**
++ .config/plasma-org.kde.plasmashell/**
++ .config/waybar/**
++
+# Exclusions are only useful when they are pattern-based and targeted.
+- .config/discord/**
+- .config/spotify/**
+- .config/Code/**
+- .config/JetBrains*/**
+- .config/BraveSoftware/**
