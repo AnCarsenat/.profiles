@@ -1,0 +1,2 @@
+[console_scripts]
+profiles = main:cli

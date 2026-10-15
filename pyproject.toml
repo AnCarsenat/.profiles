@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "profiles"
+version = "0.1.0"
+description = "Manage layered configuration profiles"
+requires-python = ">=3.9"
+dependencies = ["click>=8.1"]
+
+[project.scripts]
+profiles = "main:cli"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["main"]
+
+[tool.setuptools.data-files]
+"share/zsh/site-functions" = ["completions/_profiles"]

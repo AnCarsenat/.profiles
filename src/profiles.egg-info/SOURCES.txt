@@ -1,0 +1,9 @@
+pyproject.toml
+completions/_profiles
+src/main.py
+src/profiles.egg-info/PKG-INFO
+src/profiles.egg-info/SOURCES.txt
+src/profiles.egg-info/dependency_links.txt
+src/profiles.egg-info/entry_points.txt
+src/profiles.egg-info/requires.txt
+src/profiles.egg-info/top_level.txt

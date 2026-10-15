@@ -1,0 +1,37 @@
+#compdef profiles
+
+_profiles() {
+  local -a commands
+  commands=(
+    'load:Reset the target and load a profile'
+    'add:Apply a profile on top of the current setup'
+    'remove:Remove a profile\x27s managed symlinks'
+    'unload:Unload a profile'
+    'reset:Restore the default profile'
+    'save:Save tracked files into a profile'
+    'backup-to:Back up the current home directory'
+  )
+
+  if (( CURRENT == 2 )); then
+    _describe 'command' commands
+    return
+  fi
+
+  case "$words[2]" in
+    load|add|remove|unload)
+      _arguments '1:target directory:_directories' '2:profile directory:_directories'
+      ;;
+    reset)
+      _arguments '1:target directory:_directories'
+      ;;
+    save)
+      _arguments '-r[rule file or directory]:rules file:_files' \
+        '1:target directory:_directories' '2:profile directory:_directories'
+      ;;
+    backup-to)
+      _arguments '-r[use default rules]' '1:backup directory:_directories'
+      ;;
+  esac
+}
+
+_profiles
